@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Análise de Dados</title>
+      <link rel="stylesheet" href="/relatorio_analise.css">
+  </head>
+  <body>
+   
+      <div class="container">
+        <header>
+      
+        </header>
+        <div class="titulo">
+          <h1>UniCeub</h1>
+          <div class="sub-titulo">
+            <h2>Sistematização</h2>                        
+            <h3>(Relatório de Análise de Dados)</h3>
+          </div>
+        </div>
+
+        <fieldset>
+          <h4>Dados do Aluno e da Disciplina</h4>
+          <div class="row">
+            <div class="col-6 d-flex flex-column">
+              <label>Nome:</label>
+              <span>Henrique Sydney Ribeiro Lima</span>
+            </div>
+            <div class="col-3 d-flex flex-column">
+              <label>Data de Finalização do Trabalho:</label>
+              <span>19/03/2024</span>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex flex-column">
+              <label>Disciplina:</label>
+              <span>Matemática e Estatística para Computação</span>
+            </div>
+            <div class="col-6 d-flex flex-column">
+              <label>Curso:</label>
+              <span>Análise e Desenvolvimento de Sistemas</span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <h4>Dados Estatísticos</h4>
+          <h5>Proporção de Mulheres e Homens</h5>
+          <div class="row">
+            <div class="col-6 d-flex">
+              <div>
+                <label>Homens: </label>
+                <span>{{total_absoluto_homens}} ({{total_percentual_homens}}%)</span>
+              </div>
+            </div>
+            <div class="col-6 d-flex">
+                <div>
+                  <label>Mulheres: </label>
+                  <span>{{total_absoluto_mulheres}} ({{total_percentual_mulheres}}%)</span>
+                </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+              <img src="grafico_proporcao_mulheres_homens_pie.png" alt="Gráfico de Dispersão Idade vs Renda Anual">
+            </div>
+          </div>
+
+          <h5>Dados estatísticos variados</h5>
+          <div>
+             {{dados_estatisticos}}           
+          </div>
+
+          <h5>Levantamento de dados adicionais para análise</h5>
+          <div class="row">
+            <div class="col-12 d-flex justify-content-center align-items-center">
+             {{info_variaveis}}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="correlacao_renda_idade.png" alt="Gráfico de Dispersão Idade vs Renda Anual">
+            </div>  
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="correlacao_renda_satisfacao.png" alt="Gráfico de Dispersão Satisfacação vs Renda Anual">
+            </div>     
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="box_plot_renda.png" alt="Gráfico de Boxplot para Renda Anual">
+            </div>  
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="histograma_renda_anual.png" alt="Gráfico de Boxplot para Renda Anual">
+            </div>  
+                              
+          </div>  
+          <div class="row">
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="correlacao_renda_idade_s_outlier.png" alt="Gráfico de Dispersão Idade vs Renda Anual sem outlier">
+            </div>  
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="correlacao_renda_satisfacao_s_outlier.png" alt="Gráfico de Dispersão Satisfacação vs Renda Anual sem outlier">
+            </div>  
+          </div> 
+          <div class="row">
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="analise_barras_genero.png" alt="Mediana de variáveis relacionadas à gênero">
+            </div>
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="analise_barras_formacao.png" alt="Mediana de variáveis relacionadas à formação">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="analise_barras_genero_media.png" alt="Média de variáveis relacionadas à gênero">
+            </div>
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="analise_barras_formacao_media.png" alt="Média de variáveis relacionadas à formação">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="grafico_profissao_renda.png" alt="Profissão renda">
+            </div>           
+          </div>
+          <div class="row">
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="Feminino_profissao.png" alt="Mulheres por profissão">
+            </div>
+            <div class="col-6 d-flex flex-column d-flex justify-content-center align-items-center">
+              <img src="Masculino_profissao.png" alt="Homens por profissão">
+            </div>
+          </div>
+          <div class="row d-flex flex-column">
+            <strong>Observação:</strong>
+            <ul>
+              <li>Após a apresentação do Boxplot, todos os gráficos desconsideraram os registros de Outliers referente à renda</li>
+              <li>
+                As escalas foram adaptadas/redimensionadas para não distorcer os gráficos acima, viabilizando a análise de todas as variáveis em um único gráfico.
+                <strong>Abaixo as informações quanto às escalas:</strong>
+                <ul>
+                  <li>Renda anual: (* 1000)</li>
+                  <li>Demais variáveis, com exceção à média de filhos: (* 10)</li>
+                </ul>
+              </li>
+            </ul>              
+          </div>
+               
+        </fieldset>
+
+        <fieldset>
+          <h4>Análise dos dados</h4>
+          <div class="row">
+            <div class="col-12 d-flex flex-column">
+              <label>Qual a proporção de homens e mulheres na amostra?</label>
+              <p>Após desconsiderarmos registros repetidos, há uma proporção de {{total_percentual_mulheres}}% de mulheres e 
+                {{total_percentual_homens}}% de homens.</p>
+            </div>            
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex flex-column">
+              <label>A partir da análise entre renda anual e idade, a tendência é crescente, ou seja, a renda tende a aumentar com a idade? </label>
+              <p>
+                Conforme a correlação entre as variáveis "Renda anual" e "Idade" ({{correlacao_renda_idade}}),
+                "Idade" e "Renda anual" ({{correlacao_idade_renda}}) e 
+                o gráfico "Idade vs Renda Anual", fica demonstrado que há uma tendência de aumento da renda, conforme o aumento da idade. 
+              </p>
+              <p>
+                O mesmo ocorre
+                quando desconsideramos os dois valores Outliers da renda anual, onde temos a correlação entre as variáveis "Renda anual" e "Idade" 
+                ({{correlacao_renda_idade_sem_outlier}}), "Idade" e "Renda anual" ({{correlacao_idade_renda_sem_outlier}})
+              </p>
+              <p>
+                O valor da correlação demonstra que, por está perto de 1, ambas variáveis possuem uma correlação positiva, ou seja, elas caminham em uma direção semelhante
+              </p>
+            </div>            
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex flex-column">
+              <label>O nível de satisfação do trabalho está relacionado com a renda?</label>
+              <p>
+                Conforme o coeficiente correlação entre as variáveis "Renda anual" e "Nível de Satisfação" ({{correlacao_renda_satisfacao}}),
+                "Nível de Satisfação" e "Renda anual" ({{correlacao_satisfacao_renda}}) e 
+                o gráfico "Nível de satisfação vs Renda Anual", fica demonstrado que há uma tendência de aumento da renda, conforme o aumento da idade.
+              </p>
+              <p>
+                O mesmo ocorre
+                quando desconsideramos os dois valores Outliers da renda anual, onde temos a correlação entre as variáveis "Renda anual" e "Nível de Satisfação"
+                ({{correlacao_renda_satisfacao_sem_outlier}}),  "Nível de Satisfação" e "Renda anual" ({{correlacao_satisfacao_renda_sem_outlier}})
+              </p>
+             
+              <p>
+                O valor da correlação demonstra que, por está perto de 1, ambas variáveis possuem uma correlação positiva, ou seja, elas caminham em uma direção semelhante.
+              </p>
+              <p>
+                Segundo Abraham Laredo e Samy Dana, em "Estatística Aplicada: Análise exploratória de dados", o coeficiente de correlação linear de Pearson, 
+                ou simplesmente coeficiente de correlação, denotado pela letra r, mede o grau de associação linear entre duas variáveis quantitativas. 
+                Esse coeficiente assume valores entre -1 e 1. 
+                Quando o coeficiente de correlação é igual a 1, diz-se que as duas variáveis possuem uma correlação positiva perfeita. 
+                Quando o coeficiente de correlação é igual a -1, diz-se que as variáveis possuem uma correlação negativa perfeita. 
+                Quando o coeficiente de correlação é igual a 0, diz-se que as variá- veis possuem correlação nula, ou seja, as variações de uma variável não estão associadas linearmente às variações da outra variável.
+              </p>
+            </div>            
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex flex-column">
+              <label>Explique como foram feitos os cálculos da tabela</label>
+              <p>Para cálculo das estatísticas e geração dos gráficos, foi utilizado Python com as bibliotecas NumPy, Pandas e MatplotLib.</p>
+              <p>
+                Com base nos questionamentos da sistematização, os gráficos e variáveis estatísticas foram geradas
+                com funções das bibliotecas supracitadas, sendo que outros gráficos também foram gerados para facilitar a análise.
+              </p>
+              <p>Foi utilizada a biblioteca jinja2 para geração das informações em um relatório com base em um Template HTML.</p>
+              <p>Abaixo segue algumas outras observações de como foram realizados os cálculos:</p>
+              <ul>
+                <li>A planilha excel foi carregada pelo python, por meio da função do pandas: <code class="inline">df = pd.read_excel('Sistematização.xlsx')</code>;</li>
+                <li>Foi retirado os valores duplicados com a função  
+                  <code class="inline">df.drop_duplicates(subset=[col for col in df.columns if col != '#'])</code>;                 
+                </li>
+                <li>Cálculo da proporção: utilizada a função 
+                  <code class="inline">df['Gênero'].value_counts(normalize=True)</code>,
+                  seguida a função <code class="inline">int(proporcao_genero[ENTIDADE] * len(df))</code>
+                  foi utilizada para calcular os valores absolutos. Por fim, a função <code class="inline">proporcao_genero[ENTIDADE] * 100</code>
+                  foi utilizado para verificar o valor percentual;
+                </li>
+                <li>
+                  Os valores estatísticos variados foram gerados com a função <code class="inline">df.describe()</code>
+                  após retirar a coluna do índice <code class="inline">df.drop(columns=['#'])</code>;
+                </li>
+                <li>
+                 As correlações entre renda e idade e renda e satisfação foram criadas pela função <code class="inline">df[ENTIDADE].corr(df['Renda anual'])</code>;                 
+                </li>
+                <li>
+                  Os gráficos foram gerados com o MatplotLib, com funções como: 
+                  <code class="inline">plt.boxplot</code>, 
+                  <code class="inline">plt.scatter</code>, 
+                  <code class="inline">plot.bar()</code>; 
+                </li>
+              </ul>
+            </div>            
+          </div>
+          <div class="row">
+            <div class="col-12 d-flex flex-column">
+              <label>Qual a conclusão com o valor encontrado de desvio padrão para a Renda Anual?</label>
+              <p>
+                Tendo em vista o desvio padrão de {{desvio_padrao_renda}}, verifica-se que há uma variação considerável entorno da média referente à renda anual.
+              </p>   
+              <p>
+                Isso pode ser corroborado, observando-se o gráfico "Boxplot da Renda Anual", bem como os valores mínimo (R$ {{renda_minima}}) e máximo (R$ {{renda_maxima}}).
+              </p>                
+            </div>            
+          </div>
+        </fieldset>
+        <fieldset>
+          <h4>Texto dissertativo</h4>
+          <p>
+            De todo o exposto acima, bem como dos gráficos gerados para análise percebemos que há uma relação direta entre o nível de escolaridade
+            e a renda anual dos registros. Conforme podemos observar, considerando a mediana, a renda anual de pessoas que possuem pós-graduação 
+            é cerca de 30% superior à renda de quem tem apenas uma graduação. Já considerando a média, esse valor é cerca 25% superior.
+          </p>
+          <p>
+            Embora tenha descartado dois registros com valores extremos (outliers), decidi, ainda, analisar os dados pela mediana, por, mesmo desconsiderando
+            os outliers, ser menos sensível a valores extremos em relação à média. Não obstante, como na análise do parágrafo anterior, as demais considerarão
+            ambas variáveis, em especial para que possamos observarmos os comportamentos delas.
+          </p>
+          <p>
+            Continuando a análise, levando em consideração um dos grandes dilemas da sociedade, quando o assunto é a comparação de renda entre homens e mulheres,
+            pela massa de dados disponibilizadas, podemos ver que não há uma diferença significativa entre a renda anual dos homens e a renda anual das mulheres.
+            No entanto, vamos nos debruçar sobre essa questão, adentrando nos dados de ambos os gêneros.
+          </p>
+          <p>
+            Primeiro passo que podemos tomar é considerar uma variável que vimos que guarda relação direta: Renda Anual + Formação. Temos,
+            em nossa amostra, {{homens_graduacao}}% de homens que possuem apenas graduação e {{homens_pos_graduacao}}% que possuem pós-graduação, enquanto
+            temos {{mulheres_graduacao}}% de mulheres que possuem apenas graduação e {{mulheres_pos_graduacao}}% que possuem pós-graduação.
+          </p>
+          <p>
+            Aqui vemos algo curioso, a comparação de formação tenderia a nos mostrar que, em tese, as mulheres deveriam estar ganhando mais que os homens
+            dentro dessa amostra. Temos, portanto, 
+            que uma proporção de mais mulheres com pós graduação (70%) do que comparado a homens (64%), o que em tese, deveria significar que as mulheres, deveriam
+            ganhar mais que os homens (ao menos na amostra disponibilizada). 
+          </p>
+          <p>
+            No entanto, existem outras variáveis que podem influenciar nesta questão: a profissão. Cumpre registrar que a amostra ou a base de dados deveria
+            ser adequada para que todos os nomes de profissão tivessem o mesmo gênero, pois, assim, ficaria mais fácil de termos uma visualização
+            uniforme dos dados. No entanto, como há uma quantidade pequena de variação de profissões, podemos fazer uma análise dos dados sem grandes dificuldades.            
+          </p>
+          <p>
+            Conforme gráficos de renda anual por profissão e quantidade de homens e mulheres por profissão, podemos constatar que, aparentemente,
+            a quantidade de homem em profissões com renda anual mais elevadas é maior do que a quantidade de mulheres. Percebe-se, por exemplo,
+            mais homens nos cargos de cientista de dados, gerente de projeto e de consultor financeiro (profissões mais bem remuneradas). 
+          </p>
+          <p>
+            Por outro lado, um novo dado pode nos intrigar, por que um Advogado possui uma média salarial maior que uma Advogada ou, ainda, um Engenheiro
+            ganha mais que uma Engenheira. Em tese, profissões iguais deveriam ser remuneradas igualmente. Poderíamos nos aprofundar nessa questão, por meio 
+            de gráficos e tabulação. No entanto, apenas com uma análise rápida exploratória, podemos identificar que tal situação pode estar relacionada a um
+            outlier do escopo da profissão.
+          </p>
+          <p>
+            Vejamos o caso de advogado. Há 1 registro de Advogada que recebe, anualmente, US$ 80.000,00, enquanto 1 registro de mulher ganhando 
+            US$ 100.000,00 e 1 registro de homem ganhando US$ 110.000,00. Além disso, dois fatores chamam a atenção. A mulher que ganha apenas US$80.000,00 e que, 
+            por isso, "puxa" a média da renda anual de Advogada para baixo, possui interesse em área diversa da do Direito e nível de satisfação com o 
+            trabalho menor do que os demais. Será que isso pode impactar diretamente nos ganhos da pessoa? Aparentemente, está impactando.
+          </p>
+          <p>
+            Já quanto ao registro de Advogado, temos outras duas questões que parecem estar ocasionando uma remuneração maior que as demais. A primeira situação
+            é que o Advogado é o mais velho entre esses três registros, o que, por uma inferência empírica, podemos inferir se tratar de um nível na carreira
+            maior do que os demais registros. Ainda, o advogado trabalha 10 horas a mais por semana, o que parece justificar a renda maior nesta situação.
+          </p>
+          <p>
+            Por fim, diversas outras análise poderiam ser realizada com a amostra apresentada, por exemplo, com foco no nível de satisfação ou número de filhos.
+            Poderíamos comparar profissões e preferências por meio de transporte, ou, ainda, profissões com jornada de trabalho. No entanto,
+            para fins do escopo da presente sistematização, acredito que os dados e análise apresentadas aqui seja suficientes para tirarmos conclusões
+            significativas sobre a amostra de dados.
+          </p>
+        </fieldset>
+       
+      </div>      
+  </body>
+</html>
